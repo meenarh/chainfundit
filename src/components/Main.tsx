@@ -34,13 +34,13 @@ const Main = (props: Props) => {
         className="flex flex-row gap-2 md:my-14 my-8 overflow-hidden w-full"
       >
         <div className="flex-1 md:w-[60%] w-full">
-          <div className="bg-xanthous rounded-t-lg pt-14 pb-7 md:px-14 px-4 w-full">
+          <div className="bg-xanthous rounded-t-lg md:pt-14 pt-7 md:pb-7 pb-3 md:px-14 px-4 w-full">
             <div className="flex flex-row justify-between">
               <div>
                 <h1 className="text-chainGreen font-source font-black uppercase md:text-6xl text-4xl">
                   donation <br /> <span className="ml-3">needed!</span>
                 </h1>
-                <p className="bg-white font-roboto text-sm text-center text-chainGreen md:w-fit w-[220px] md:px-5 px-2 mt-2">
+                <p className="bg-white font-roboto text-xs text-center text-chainGreen md:w-fit w-[200px] md:px-5 px-2 mt-2">
                   Donate a little, empower many
                 </p>
               </div>
@@ -60,20 +60,20 @@ const Main = (props: Props) => {
             </p>
 
             <div className="flex flex-row">
-              <div className="border-t-2 border-chainGreen md:w-[250px] w-[150px] mt-3 py-1">
-                <p className="text-center text-white md:text-2xl text-lg font-bold md:ml-6">
+              <div className="border-t-2 border-chainGreen md:w-[250px] w-[150px] mt-2 py-1">
+                <p className="text-white md:text-2xl text-base font-bold md:ml-6 ml-2">
                   Wema Bank
                 </p>
-                <p className="text-center md:text-3xl text-xl font-bold text-chainGreen font-source md:ml-4">
+                <p className="md:text-3xl text-lg font-bold text-chainGreen font-source md:ml-4 ml-1">
                   8283603167
                 </p>
-                <p className="font-bold md:text-lg text-xs text-white md:ml-6 text-center">
+                <p className="font-bold md:text-lg text-xs text-white md:ml-6 ml-2">
                   Chainfundit/Save <br /> Mariam from Cancer
                 </p>
                 <div className="border-t-2 border-chainGreen md:w-[250px] w-[150px] mt-2"></div>
               </div>
 
-              <div className="md:-mt-8 -mt-2">
+              <div className="md:-mt-8 -mt-3">
                 <Image
                   src={mariam}
                   alt="Mariam"
@@ -111,46 +111,46 @@ const Main = (props: Props) => {
             </ul>
           </div>
 
-          <div className="md:px-10 px-4 flex flex-row justify-between py-6">
+          <div className="md:px-10 px-4 flex flex-row justify-between py-2">
             <Link
               href={"chainfundit.com"}
-              className="flex flex-row md:gap-3 gap-1.5 text-chainGreen text-xl"
+              className="flex flex-row md:gap-3 gap-1.5 text-chainGreen md:text-xl text-sm"
             >
               <LiaLinkSolid
-                className="bg-chainGreen p-1 rounded-full w-[22px] h-[22px] md:w-[30px] md:h-[30px] mt-1"
+                className="bg-chainGreen p-1 rounded-full w-[22px] h-[22px] md:w-[30px] md:h-[30px]"
                 color="#FFFFFF"
                 size={30}
               />
               chainfundit.com
             </Link>
 
-            <ul className="flex flex-row md:gap-3 gap-1 text-chainGreen text-xl">
+            <ul className="flex flex-row md:gap-3 gap-1 mx-2 text-chainGreen">
               <li>
                 <FaFacebookF
-                  className="bg-chainGreen p-1 rounded-full w-[22px] h-[22px] md:w-[30px] md:h-[30px]"
+                  className="bg-chainGreen p-1 rounded-full w-[18px] h-[18px] md:w-[30px] md:h-[30px]"
                   color="#FFFFFF"
                   size={30}
                 />
               </li>
               <li>
                 <BsTwitter
-                  className="bg-chainGreen p-1 rounded-full w-[22px] h-[22px] md:w-[30px] md:h-[30px]"
+                  className="bg-chainGreen p-1 rounded-full w-[18px] h-[18px] md:w-[30px] md:h-[30px]"
                   color="#FFFFFF"
                   size={30}
                 />
               </li>
               <li>
                 <FaInstagram
-                  className="bg-chainGreen p-1 rounded-full w-[22px] h-[22px] md:w-[30px] md:h-[30px]"
+                  className="bg-chainGreen p-1 rounded-full w-[18px] h-[18px] md:w-[30px] md:h-[30px]"
                   color="#FFFFFF"
                   size={30}
                 />
               </li>
-              <li className="ml-3 text-base md:text-lg">Chainfundit</li>
+              <li className="ml-3 text-sm md:text-lg">Chainfundit</li>
             </ul>
           </div>
 
-          <div className="parent-container sm:mt-10">
+          <div className="parent-container">
           <FloatingButton />
           </div>
           
@@ -161,21 +161,21 @@ const Main = (props: Props) => {
             </div>
 
             <div className="px-5 flex flex-row justify-between font-dmSans text-center">
-              <div className="py-5">
+              <div className="py-6 pr-2">
                 <p className="text-xl font-medium text-[#424242]">₦130,000</p>
                 <span className="text-lg text-[#565656] font-medium">
                   raised
                 </span>
               </div>
 
-              <div className="border-x border-x-gray-200 py-5 px-2">
+              <div className="border-x border-x-gray-200 py-6 px-[6px]">
                 <p className="text-xl font-medium text-[#424242]">2</p>
                 <span className="text-lg text-[#565656] font-medium">
                   donations
                 </span>
               </div>
 
-              <div className="py-5">
+              <div className="py-6 px-1">
                 <p className="text-xl font-medium text-[#424242]">
                   ₦10,000,000
                 </p>
@@ -187,19 +187,19 @@ const Main = (props: Props) => {
           <div className="md:hidden flex flex-row justify-between gap-3 px-4 my-10 text-center">
             <Link
               href={"https://chainfund.it/#"}
-              className="w-[138px] shadow-5xl p-2 border-2 border-chainGreen rounded-lg bg-chainGreen hover:bg-white text-white font-semibold font-dmSans hover:text-chainGreen"
+              className="md:w-[138px] w-[100px] md:text-base text-xs shadow-5xl p-2 border-2 border-chainGreen rounded-lg bg-chainGreen hover:bg-white text-white font-semibold font-dmSans hover:text-chainGreen"
             >
               Donate NGN
             </Link>
             <Link
               href={"https://chainfund.it/3PsRcTg"}
-              className="w-[138px] shadow-5xl p-2 border-2 border-chainGreen rounded-lg bg-chainGreen hover:bg-white text-white font-semibold font-dmSans hover:text-chainGreen"
+              className="md:w-[138px] w-[100px] md:text-base text-xs shadow-5xl p-2 border-2 border-chainGreen rounded-lg bg-chainGreen hover:bg-white text-white font-semibold font-dmSans hover:text-chainGreen"
             >
               Donate GBP
             </Link>
             <Link
               href={"https://chainfund.it/45FuyN0"}
-              className="w-[138px] shadow-5xl p-2 border-2 border-chainGreen rounded-lg bg-chainGreen hover:bg-white text-white font-semibold font-dmSans hover:text-chainGreen"
+              className="md:w-[138px] w-[100px] md:text-base text-xs shadow-5xl p-2 border-2 border-chainGreen rounded-lg bg-chainGreen hover:bg-white text-white font-semibold font-dmSans hover:text-chainGreen"
             >
               Donate USD
             </Link>
@@ -250,7 +250,7 @@ const Main = (props: Props) => {
             <p className="uppercase font-dmSans text-base text-[#676767]">
               Created On:
             </p>
-            <span className="flex flex-row gap-2 text-chainGreen text-lg font-dmSans font-medium">
+            <span className="flex flex-row gap-2 text-chainGreen hover:text-springGreen text-lg font-dmSans font-medium">
               <FaCalendar className="mt-1" size={16} color="#104901" />
               September 5, 2023
             </span>

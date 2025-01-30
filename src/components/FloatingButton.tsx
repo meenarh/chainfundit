@@ -24,13 +24,11 @@ const FloatingButton = (props: Props) => {
  }, []);
 
   return (
-    <div className="flex flex-col gap-5">
-      <div></div>
     <div
-      className={`md:hidden flex flex-row justify-between text-center px-8 mt-10 ${
+      className={`md:hidden flex flex-row justify-between text-center px-4 my-7 ${
         isFloating
-          ? "fixed top-0 z-50 flex flex-row justify-between gap-24"
-          : "absolute  top-[750px] flex flex-row justify-between gap-24 sm:gap-28 my-12"
+          ? "fixed -top-4 z-50 flex flex-row justify-between gap-14"
+          : "absolute  top-[670px] flex flex-row justify-between gap-14"
       }`}
     >
       <Link
@@ -49,7 +47,6 @@ const FloatingButton = (props: Props) => {
       >
         Share
       </Link>
-    </div>
     </div>
   );
 };
