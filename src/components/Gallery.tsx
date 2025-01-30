@@ -27,7 +27,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="md:w-[60%] w-full px-5 flex flex-col gap-4">
+    <div className="md:w-[60%] w-full md:px-5 px-2 flex flex-col gap-4">
       {/* Image Grid*/}
       <div className="hidden md:grid grid-cols-3 gap-4">
         {images.map((img, index) => (
