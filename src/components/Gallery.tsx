@@ -12,8 +12,8 @@ const images = [image1, image2, image3, image4];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [currentIndex, setCurrentIndex] = useState<number>(0); 
-  
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
@@ -22,8 +22,13 @@ const Gallery = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="md:w-[60%] w-full px-5 flex flex-col gap-4">
+      {/* Grid of images */}
       <div className="hidden md:grid grid-cols-3 gap-4">
         {images.map((img, index) => (
           <div
@@ -47,6 +52,7 @@ const Gallery = () => {
         ))}
       </div>
 
+      {/* Mobile view */}
       <div className="md:hidden flex justify-center items-center relative">
         <button
           className="absolute left-0 text-white p-3 rounded-full"
@@ -77,6 +83,20 @@ const Gallery = () => {
         </button>
       </div>
 
+      {/* Pagination dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handleDotClick(index)}
+            className={`w-3 h-3 rounded-full ${
+              currentIndex === index ? "bg-gray-400" : "bg-gray-500"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Fullscreen modal */}
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div

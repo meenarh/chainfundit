@@ -14,8 +14,8 @@ const Navbar = (props: Props) => {
 
   const navLinkStyles = "text-base capitalize text-chainGreen font-semibold";
   return (
-    <div className="md:px-28 md:pt-5 px-3 py-4">
-      <nav className="flex flex-row md:gap-[18rem] gap-[7.9rem] items-center">
+    <div className="md:px-28 md:pt-5 px-4 py-4 sm:px-4">
+      <nav className="flex flex-row justify-between md:gap-[18rem]">
         <Image src={logo} alt="Chainfundit Logo" width={200} height={40} />
 
         <ul className="hidden md:flex flex-row gap-5 md:pt-3 font-dmSans">
@@ -35,7 +35,7 @@ const Navbar = (props: Props) => {
           {!isMobileMenuOpen ? (
             <RxHamburgerMenu
               size={32}
-              className="right-0 cursor-pointer text-chainGreen p-1 border border-chainGreen rounded-md"
+              className="justify-end right-[-5px] cursor-pointer text-chainGreen p-1 border border-chainGreen rounded-md"
               onClick={() => setIsMobileMenuOpen(true)}
               aria-controls="mobile-menu"
               aria-expanded={isMobileMenuOpen}

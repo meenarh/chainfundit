@@ -28,7 +28,7 @@ const FloatingButton = (props: Props) => {
       className={`md:hidden flex flex-row justify-between px-8 ${
         isFloating
           ? "fixed top-0 z-50 flex flex-row justify-between gap-24"
-          : "absolute top-[750px] flex flex-row justify-between gap-24 my-12"
+          : "absolute sm:top-[800px] top-[750px] flex flex-row justify-between gap-24 sm:gap-28 my-12"
       }`}
     >
       <Link
