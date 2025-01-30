@@ -28,7 +28,7 @@ const Gallery = () => {
 
   return (
     <div className="md:w-[60%] w-full px-5 flex flex-col gap-4">
-      {/* Grid of images */}
+      {/* Image Grid*/}
       <div className="hidden md:grid grid-cols-3 gap-4">
         {images.map((img, index) => (
           <div
@@ -55,24 +55,36 @@ const Gallery = () => {
       {/* Mobile view */}
       <div className="md:hidden flex justify-center items-center relative">
         <button
-          className="absolute left-0 text-white p-3 rounded-full"
+          className="absolute z-10 -left-2 text-white p-3 rounded-full"
           onClick={handlePrev}
         >
           <ChevronLeft size={32} />
         </button>
 
-        <div className="overflow-hidden">
+        <div className="relative overflow-hidden">
           <Image
             src={images[currentIndex]}
             alt={`Selected image ${currentIndex + 1}`}
             width={220}
             height={100}
-            className="object-cover w-[400px] h-[400px]"
+            className="object-cover w-[500px] h-[400px]"
             style={{
               objectPosition: "center",
               objectFit: "cover", 
             }}
           />
+
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-2 h-2 rounded-full ${
+                  currentIndex === index ? "bg-gray-400" : "bg-gray-500"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         <button
@@ -81,19 +93,6 @@ const Gallery = () => {
         >
           <ChevronRight size={32} />
         </button>
-      </div>
-
-      {/* Pagination dots */}
-      <div className="flex justify-center gap-2 mt-4">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-gray-400" : "bg-gray-500"
-            }`}
-          />
-        ))}
       </div>
 
       {/* Fullscreen modal */}
