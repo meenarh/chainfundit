@@ -150,7 +150,7 @@ const Main = (props: Props) => {
             </ul>
           </div>
 
-          <div className="parent-container">
+          <div className="parent-container sm:mt-10">
           <FloatingButton />
           </div>
           
