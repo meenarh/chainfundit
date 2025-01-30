@@ -155,7 +155,7 @@ const Main = (props: Props) => {
           </div>
           
 
-          <div className="md:hidden block bg-gray-100 shadow-3xl rounded-lg h-[136px] mt-24">
+          <div className="md:hidden block bg-gray-100 shadow-3xl rounded-lg h-[136px] mt-24 mx-1">
             <div className="bg-white p-4">
               <Progress value={1.3} />
             </div>
