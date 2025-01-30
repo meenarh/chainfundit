@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
   const navLinkStyles = "text-base capitalize text-chainGreen font-semibold";
   return (
     <div className="md:px-28 md:pt-5 px-4 py-4 sm:px-4">
-      <nav className="flex flex-row justify-between md:gap-[18rem]">
+      <nav className="md:w-2/3 flex flex-row justify-between md:gap-[18rem]">
         <Image src={logo} alt="Chainfundit Logo" width={200} height={40} />
 
         <ul className="hidden md:flex flex-row gap-5 md:pt-3 font-dmSans">
