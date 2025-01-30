@@ -9,7 +9,7 @@ export default function Home() {
 
     <div className="">
       <Navbar />
-      <div className="md:ml-24 md:mr-14 py-4">
+      <div className="md:ml-24 md:mr-14 py-2">
       <Main />
       <Gallery />
       <Updates />
