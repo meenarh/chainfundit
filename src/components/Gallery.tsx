@@ -118,7 +118,6 @@ const Gallery = () => {
               />
             </motion.div>
 
-            {/* Next Button */}
             <button
               className="absolute right-5 text-white bg-gray-800 p-3 rounded-full"
               onClick={handleNext}

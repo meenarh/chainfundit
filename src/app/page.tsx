@@ -8,8 +8,8 @@ export default function Home() {
   return (
 
     <div className="">
-      <div className="md:ml-24 md:mr-14 py-4">
       <Navbar />
+      <div className="md:ml-24 md:mr-14 py-4">
       <Main />
       <Gallery />
       <Updates />

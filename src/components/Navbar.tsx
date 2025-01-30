@@ -12,11 +12,11 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navLinkStyles = "text-lg capitalize text-chainGreen font-semibold";
+  const navLinkStyles = "text-base capitalize text-chainGreen font-semibold";
   return (
-    <div className="md:px-24 px-3 py-4">
+    <div className="md:px-28 md:pt-5 px-3 py-4">
       <nav className="flex flex-row md:gap-[18rem] gap-[7.9rem] items-center">
-        <Image src={logo} alt="Chainfundit Logo" width={220} height={45} />
+        <Image src={logo} alt="Chainfundit Logo" width={200} height={40} />
 
         <ul className="hidden md:flex flex-row gap-5 md:pt-3 font-dmSans">
           <li className={navLinkStyles}>

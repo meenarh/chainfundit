@@ -24,7 +24,7 @@ type Props = {};
 const Main = (props: Props) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className="px-2 mt-5 ml-2">
+    <div className="px-2 mt-2 ml-2">
       <h1 className="font-roboto font-semibold text-4xl md:ml-5">
         Save Mariam from Cancer
       </h1>
@@ -49,7 +49,7 @@ const Main = (props: Props) => {
                   src={logo}
                   alt="Chainfundit Logo"
                   className="mt-2"
-                  width={220}
+                  width={200}
                   height={40}
                 />
               </div>
