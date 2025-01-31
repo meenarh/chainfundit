@@ -19,6 +19,20 @@ import { FaCalendar } from "react-icons/fa";
 import { TbClockHour4 } from "react-icons/tb";
 import FloatingButton from "./FloatingButton";
 
+import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel,
+} from "@/components/ui/alert-dialog";
+import { IoMdClose } from "react-icons/io";
+
 type Props = {};
 
 const Main = (props: Props) => {
@@ -151,9 +165,8 @@ const Main = (props: Props) => {
           </div>
 
           <div className="parent-container">
-          <FloatingButton />
+            <FloatingButton />
           </div>
-          
 
           <div className="md:hidden block bg-gray-100 shadow-3xl rounded-lg h-[136px] mt-24 mx-1">
             <div className="bg-white p-4">
@@ -280,14 +293,76 @@ const Main = (props: Props) => {
               </div>
             </div>
 
-            <Link
-              href={
-                "https://chainfundit.com/mariamolawale/save-mariam-from-cancer/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIzNDAiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
-              }
-              className="w-[130px] shadow-5xl py-3  font-bold text-center text-base font-dmSans text-chainGreen hover:text-white bg-white hover:bg-chainGreen border-2 border-chainGreen rounded-lg"
-            >
-              View All
-            </Link>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button className="w-[90px] h-12 shadow-5xl py-2 font-bold text-base font-dmSans text-chainGreen hover:text-white bg-white hover:bg-chainGreen border-2 border-chainGreen rounded-lg outline-none">
+                  View All
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent className="md:w-[600px] w-[350px] h-fit px-6 py-3 text-center items-center">
+                <AlertDialogCancel className="border-none shadow-none justify-start w-10 text-center items-center">
+                  <IoMdClose size={30} color="#104901" />
+                </AlertDialogCancel>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>
+                    <h2 className="font-dmSans font-bold text-2xl text-chainGreen text-center">
+                      Recent Donations
+                    </h2>
+                  </AlertDialogTitle>
+                </AlertDialogHeader>
+                <div className="items-center mt-4">
+                  <Link
+                    href={
+                      "https://chainfundit.com/mariamolawale/donations/save-mariam-from-cancer/"
+                    }
+                    className="text-center text-xl font-bold w-fit text-chainGreen px-6 py-4 hover:bg-white border-2 bg-xanthous border-chainGreen rounded-lg shadow-5xl"
+                  >
+                    Donate Now
+                  </Link>
+                </div>
+
+                <div>
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-lg p-3 mt-7 border font-futura">
+                    <div className="flex flex-row justify-between">
+                      <p className="text-lg text-black font-medium">
+                        Anonymous
+                      </p>
+                      <p className="text-xs text-[#525252]">
+                        September 6, 2023
+                      </p>
+                    </div>
+
+                    <div className="flex flex-row justify-between">
+                      <p className="font-dmSans text-[#00160a] text-base font-medium">
+                        Amount Donated
+                      </p>
+                      <p className="text-xl text-[#219653] font-extrabold font-dmSans">
+                        ₦ 25,000.00
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-lg p-3 mt-7 border font-futura">
+                    <div className="flex flex-row justify-between">
+                      <p className="text-lg text-black font-medium">
+                        Anonymous
+                      </p>
+                      <p className="text-xs text-[#525252]">
+                        September 6, 2023
+                      </p>
+                    </div>
+
+                    <div className="flex flex-row justify-between">
+                      <p className="font-dmSans text-[#00160a] text-base font-medium">
+                        Amount Donated
+                      </p>
+                      <p className="text-xl text-[#219653] font-extrabold font-dmSans">
+                        ₦ 80,000.00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
 
           <div className="flex flex-col gap-8 text-[19px] font-dmSans text-chainGreen font-medium pt-10 pb-5">
