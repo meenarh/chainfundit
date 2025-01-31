@@ -121,7 +121,7 @@ const FloatingButton = (props: Props) => {
               <CopyButton text={"Copy"} />
             </div>
           </AlertDialogContent>
-          <AlertDialogFooter className="py-5 bg-chainGreen"></AlertDialogFooter>
+           
         </AlertDialog>
 
     </div>
